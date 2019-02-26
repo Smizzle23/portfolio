@@ -3,37 +3,38 @@ import './Nav.css';
 import logo from '../../logo.svg';
 import { NavLink } from 'react-router-dom';
  
-class Nav extends React.Component {
+function Nav () {
 
-	constructor() {
-		super();
-		this.state = {
-
-		}
+	const getStyleAbout = {
+		backgroundColor: '#FF7A00',
+		color: 'white',
+		padding: '0.5em 1em'
 	}
 
-	render() {
+	const getStyleSkills = {
+		backgroundColor: '#970408',
+		color: 'white',
+		padding: '0.5em 1em'
+	}
+	
+	const getStyleWork = {
+		backgroundColor: '#00ba2e',
+		color: 'white',
+		padding: '0.5em 1em'
+	}
 
-		const getStyle = {
-			backgroundColor: '#FF7A00',
-			transition: 'all 230ms',
-			color: 'white',
-			padding: '0.5em 1em'
-		}
-
-		return (
-			<div className="nav">
-				<div className="nav-container">
-					<img src={ logo } className="App-logo" alt="logo" />
-					<ul className="nav-bar-list">
-						<li className=""><NavLink to="/" exact activeStyle={ getStyle }>About</NavLink></li>
-						<li className=""><NavLink to="/skills" activeStyle={ getStyle }>Skills</NavLink></li>
-						<li className=""><NavLink to="/work" activeStyle={ getStyle }>Work</NavLink></li>
-					</ul>
-				</div>
+	return (
+		<div className="nav">
+			<div className="nav-container">
+				<img src={ logo } className="App-logo" alt="logo" />
+				<ul className="nav-bar-list">
+					<li className=""><NavLink to="/" exact activeStyle={ getStyleAbout }>About</NavLink></li>
+					<li className=""><NavLink to="/skills" activeStyle={ getStyleSkills }>Skills</NavLink></li>
+					<li className=""><NavLink to="/work" activeStyle={ getStyleWork }>Work</NavLink></li>
+				</ul>
 			</div>
-		)
-	}
+		</div>
+	)
 }
 
 export default Nav;

@@ -1,0 +1,22 @@
+.skillsContent {
+	height: 547px;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	border-radius: 30px;
+	color: #888;
+	line-height: 3em;
+}
+
+.skillsBottom {
+	background-color: #930006;
+	width: 1920px;
+	height: 400px;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	color: #414141;
+}

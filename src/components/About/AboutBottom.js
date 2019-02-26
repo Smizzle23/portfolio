@@ -1,10 +1,13 @@
 import React from 'react';
 import './About.css';
+import { useSpring, animated, config } from 'react-spring';
 
-class AboutBottom extends React.Component {
+function AboutBottom () {
 
-	render() {
-		return (
+	const props = useSpring({ marginTop: 0, from: { marginTop: 4000 }, delay: 1000, config: config.molasses})
+
+	return (
+		<animated.div style={ props }>
 			<div className="bottomSection">
 				<div className="bottomContainer">
 					<div className="bottomInfo">
@@ -19,7 +22,8 @@ class AboutBottom extends React.Component {
 					</div>
 				</div>
 			</div>
-		)
-	}
+		</animated.div>
+	)
 }
+
 export default AboutBottom;
